@@ -10,17 +10,16 @@
 
 @implementation Movie
 
-- (instancetype)initWithTitle:(NSString *)title thumbnail:(NSURL *)thumbnail criticsScore:(NSNumber *)criticsScore audienceScore:(NSNumber *)audienceScore synopsis:(NSString *)synopsis highResThumbnail:(NSURL *)highResThumbnail year:(NSNumber *)year website:(NSString *)website
+- (instancetype)initWithTitle:(NSString *)title thumbnail:(NSURL *)thumbnail synopsis:(NSString *)synopsis highResThumbnail:(NSURL *)highResThumbnail year:(NSNumber *)year website:(NSString *)website reviewURL:(NSString *)reviewURL
 {
     self = [super init];
     if (self) {
         
+        _reviewURL = reviewURL;
         _website = website;
         _year = year;
         _title = title;
         _thumbnail = thumbnail;
-        _criticsScore = criticsScore;
-        _audienceScore = audienceScore;
         _synopsis = synopsis;
         _highResThumbnail = highResThumbnail;
     }

@@ -20,6 +20,13 @@
 		AAD31DF61BA773B4003D94BF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD31DF51BA773B4003D94BF /* DetailViewController.m */; };
 		AAD31DFC1BA7ACF8003D94BF /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD31DFB1BA7ACF8003D94BF /* WebViewController.m */; };
 		AAD31DFF1BA86A09003D94BF /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD31DFE1BA86A09003D94BF /* Review.m */; };
+		AAD960D51BA8A88F00D888F9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD960D41BA8A88F00D888F9 /* CoreLocation.framework */; };
+		AAD960D71BA8A89400D888F9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD960D61BA8A89400D888F9 /* MapKit.framework */; };
+		AAD960DB1BA8B02100D888F9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD960DA1BA8B02100D888F9 /* MapViewController.m */; };
+		AAD960DE1BA8D1E000D888F9 /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD960DD1BA8D1E000D888F9 /* Theatre.m */; };
+		AAD960E11BA8DE0100D888F9 /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD960E01BA8DE0100D888F9 /* MapPin.m */; };
+		AAD960E51BA8EA7F00D888F9 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD960E41BA8EA7F00D888F9 /* LocationManager.m */; };
+		AAD960E81BA8FB9800D888F9 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD960E71BA8FB9800D888F9 /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,16 +54,28 @@
 		AAD31DDE1BA74870003D94BF /* RottenMangoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottenMangoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD31DE31BA74870003D94BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD31DE41BA74870003D94BF /* RottenMangoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RottenMangoesTests.m; sourceTree = "<group>"; };
-		AAD31DEE1BA74E47003D94BF /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
-		AAD31DEF1BA74E47003D94BF /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		AAD31DEE1BA74E47003D94BF /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = RottenMangoes/Movie.h; sourceTree = "<group>"; };
+		AAD31DEF1BA74E47003D94BF /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = RottenMangoes/Movie.m; sourceTree = "<group>"; };
 		AAD31DF11BA76175003D94BF /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		AAD31DF21BA76175003D94BF /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		AAD31DF41BA773B4003D94BF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		AAD31DF51BA773B4003D94BF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		AAD31DFA1BA7ACF8003D94BF /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		AAD31DFB1BA7ACF8003D94BF /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		AAD31DFD1BA86A08003D94BF /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
-		AAD31DFE1BA86A09003D94BF /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
+		AAD31DFD1BA86A08003D94BF /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Review.h; path = RottenMangoes/Review.h; sourceTree = "<group>"; };
+		AAD31DFE1BA86A09003D94BF /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Review.m; path = RottenMangoes/Review.m; sourceTree = "<group>"; };
+		AAD960D41BA8A88F00D888F9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AAD960D61BA8A89400D888F9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AAD960D91BA8B02100D888F9 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		AAD960DA1BA8B02100D888F9 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		AAD960DC1BA8D1E000D888F9 /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Theatre.h; path = RottenMangoes/Theatre.h; sourceTree = "<group>"; };
+		AAD960DD1BA8D1E000D888F9 /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Theatre.m; path = RottenMangoes/Theatre.m; sourceTree = "<group>"; };
+		AAD960DF1BA8DE0100D888F9 /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapPin.h; path = RottenMangoes/MapPin.h; sourceTree = "<group>"; };
+		AAD960E01BA8DE0100D888F9 /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapPin.m; path = RottenMangoes/MapPin.m; sourceTree = "<group>"; };
+		AAD960E31BA8EA7F00D888F9 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManager.h; path = RottenMangoes/LocationManager.h; sourceTree = "<group>"; };
+		AAD960E41BA8EA7F00D888F9 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationManager.m; path = RottenMangoes/LocationManager.m; sourceTree = "<group>"; };
+		AAD960E61BA8FB9800D888F9 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		AAD960E71BA8FB9800D888F9 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD960D71BA8A89400D888F9 /* MapKit.framework in Frameworks */,
+				AAD960D51BA8A88F00D888F9 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +101,11 @@
 		AAD31DB91BA74870003D94BF = {
 			isa = PBXGroup;
 			children = (
+				AAD960E21BA8DE0600D888F9 /* Model */,
 				AAD31DC41BA74870003D94BF /* RottenMangoes */,
 				AAD31DE11BA74870003D94BF /* RottenMangoesTests */,
 				AAD31DC31BA74870003D94BF /* Products */,
+				AAD960D81BA8A89A00D888F9 /* Framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,11 +129,11 @@
 				AAD31DF21BA76175003D94BF /* CustomCollectionViewCell.m */,
 				AAD31DF41BA773B4003D94BF /* DetailViewController.h */,
 				AAD31DF51BA773B4003D94BF /* DetailViewController.m */,
-				AAD31DFD1BA86A08003D94BF /* Review.h */,
-				AAD31DFE1BA86A09003D94BF /* Review.m */,
-				AAD31DEE1BA74E47003D94BF /* Movie.h */,
-				AAD31DEF1BA74E47003D94BF /* Movie.m */,
 				AAD31DD21BA74870003D94BF /* Main.storyboard */,
+				AAD960D91BA8B02100D888F9 /* MapViewController.h */,
+				AAD960DA1BA8B02100D888F9 /* MapViewController.m */,
+				AAD960E61BA8FB9800D888F9 /* TableViewCell.h */,
+				AAD960E71BA8FB9800D888F9 /* TableViewCell.m */,
 				AAD31DFA1BA7ACF8003D94BF /* WebViewController.h */,
 				AAD31DFB1BA7ACF8003D94BF /* WebViewController.m */,
 				AAD31DD51BA74870003D94BF /* Images.xcassets */,
@@ -145,6 +168,32 @@
 				AAD31DE31BA74870003D94BF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAD960D81BA8A89A00D888F9 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				AAD960D61BA8A89400D888F9 /* MapKit.framework */,
+				AAD960D41BA8A88F00D888F9 /* CoreLocation.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		AAD960E21BA8DE0600D888F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAD31DFD1BA86A08003D94BF /* Review.h */,
+				AAD31DFE1BA86A09003D94BF /* Review.m */,
+				AAD31DEE1BA74E47003D94BF /* Movie.h */,
+				AAD31DEF1BA74E47003D94BF /* Movie.m */,
+				AAD960DF1BA8DE0100D888F9 /* MapPin.h */,
+				AAD960E01BA8DE0100D888F9 /* MapPin.m */,
+				AAD960DC1BA8D1E000D888F9 /* Theatre.h */,
+				AAD960DD1BA8D1E000D888F9 /* Theatre.m */,
+				AAD960E31BA8EA7F00D888F9 /* LocationManager.h */,
+				AAD960E41BA8EA7F00D888F9 /* LocationManager.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,15 +296,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD960E11BA8DE0100D888F9 /* MapPin.m in Sources */,
 				AAD31DCB1BA74870003D94BF /* AppDelegate.m in Sources */,
 				AAD31DC81BA74870003D94BF /* main.m in Sources */,
 				AAD31DFF1BA86A09003D94BF /* Review.m in Sources */,
 				AAD31DF01BA74E47003D94BF /* Movie.m in Sources */,
 				AAD31DFC1BA7ACF8003D94BF /* WebViewController.m in Sources */,
+				AAD960DE1BA8D1E000D888F9 /* Theatre.m in Sources */,
+				AAD960E81BA8FB9800D888F9 /* TableViewCell.m in Sources */,
 				AAD31DF31BA76175003D94BF /* CustomCollectionViewCell.m in Sources */,
 				AAD31DD11BA74870003D94BF /* ViewController.m in Sources */,
+				AAD960DB1BA8B02100D888F9 /* MapViewController.m in Sources */,
 				AAD31DCE1BA74870003D94BF /* RottenMangoes.xcdatamodeld in Sources */,
 				AAD31DF61BA773B4003D94BF /* DetailViewController.m in Sources */,
+				AAD960E51BA8EA7F00D888F9 /* LocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +504,7 @@
 				AAD31DEA1BA74870003D94BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAD31DEB1BA74870003D94BF /* Build configuration list for PBXNativeTarget "RottenMangoesTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +513,7 @@
 				AAD31DED1BA74870003D94BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

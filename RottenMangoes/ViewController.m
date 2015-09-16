@@ -59,10 +59,6 @@
                 
                 NSNumber *year = [eachMovie objectForKey:@"year"];
                 
-                NSDictionary *rating = [eachMovie objectForKey:@"ratings"];
-                NSNumber *criticsScore = [rating objectForKey:@"critics_score"];
-                NSNumber *audienceScore = [rating objectForKey:@"audience_score"];
-                
                 NSDictionary *poster = [eachMovie objectForKey:@"posters"];
                 NSString *originalThumbnail = [poster objectForKey:@"thumbnail"];
                 NSURL *thumbnail = [NSURL URLWithString:[poster objectForKey:@"thumbnail"]];
@@ -75,7 +71,9 @@
                 
                 NSString *synopsis = [eachMovie objectForKey:@"synopsis"];
                 
-                Movie *movie = [[Movie alloc] initWithTitle:title thumbnail:thumbnail criticsScore:criticsScore audienceScore:audienceScore synopsis:synopsis highResThumbnail:highResThumbnail year:year website:website];
+                NSString *reviewString = [[links objectForKey:@"reviews"] stringByAppendingString:@"?apikey=j9fhnct2tp8wu2q9h75kanh9&page_limit=3"];
+                
+                Movie *movie = [[Movie alloc] initWithTitle:title thumbnail:thumbnail synopsis:synopsis highResThumbnail:highResThumbnail year:year website:website reviewURL:reviewString];
                 
                 [self.movies addObject:movie];
             }
@@ -105,7 +103,7 @@
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     Movie *movie = self.movies[indexPath.item];
     cell.object = movie;
-    cell.tag = (int)movie.thumbnail;
+    cell.tag = (int)movie.highResThumbnail;
     
     return cell;
 }

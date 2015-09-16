@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "WebViewController.h"
 #import "Review.h"
+#import "MapViewController.h"
 
 @interface DetailViewController ()
 
@@ -46,9 +47,7 @@
     self.highResImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.movie.highResThumbnail]];
     self.detailLabel.text = self.movie.synopsis;
     
-    self.reviewDateLabel.text = self.review.date;
-    self.pulicationLabel.text = self.review.publication;
-    self.quoteLabel.text = self.review.quote;
+    
 }
 
 #pragma mark - Helper Method -
@@ -59,15 +58,22 @@
         
         webVC.movie = self.movie;
         
+    } else if ([segue.identifier isEqualToString:@"showMap"]){
+        
+        MapViewController *mapVC = segue.destinationViewController;
+        
+        mapVC.movie = self.movie;
+        
     }
 }
 
 - (void)getReviewData {
-    NSString *urlString = @"http://api.rottentomatoes.com/api/public/v1.0/movies/771311818/reviews.json?apikey=j9fhnct2tp8wu2q9h75kanh9&page_limit=3";
     
     NSURLSession *session = [NSURLSession sharedSession];
     
-    NSURLSessionTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSLog(@"review URL: %@", self.movie.reviewURL);
+    
+    NSURLSessionTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:self.movie.reviewURL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         if (!error) {
             
@@ -91,6 +97,9 @@
                 
             }
             dispatch_async(dispatch_get_main_queue(), ^{
+                self.reviewDateLabel.text = self.review.date;
+                self.pulicationLabel.text = self.review.publication;
+                self.quoteLabel.text = self.review.quote;
             });
         }
         

@@ -13,14 +13,13 @@
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSURL *thumbnail;
-@property (strong, nonatomic) NSNumber *criticsScore;
-@property (strong, nonatomic) NSNumber *audienceScore;
 @property (strong, nonatomic) NSString *synopsis;
 @property (strong, nonatomic) NSNumber *year;
 @property (strong, nonatomic) NSURL *highResThumbnail;
 @property (strong, nonatomic) NSString *website;
+@property (strong, nonatomic) NSString *reviewURL;
 
 
-- (instancetype)initWithTitle:(NSString *)title thumbnail:(NSURL *)thumbnail criticsScore:(NSNumber *)criticsScore audienceScore:(NSNumber *)audienceScore synopsis:(NSString *)synopsis highResThumbnail:(NSURL *)highResThumbnail year:(NSNumber *)year website:(NSString *)website;
+- (instancetype)initWithTitle:(NSString *)title thumbnail:(NSURL *)thumbnail synopsis:(NSString *)synopsis highResThumbnail:(NSURL *)highResThumbnail year:(NSNumber *)year website:(NSString *)website reviewURL:(NSString *)reviewURL;
 
 @end

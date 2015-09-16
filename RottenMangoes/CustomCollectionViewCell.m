@@ -11,6 +11,7 @@
 @interface CustomCollectionViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *displayImage;
+@property (nonatomic) NSURLSessionDownloadTask *downloadTask;
 
 @end
 
@@ -30,21 +31,28 @@
     
     self.displayImage.image = nil;
     
+    NSURL *thumbnailURL = self.object.thumbnail;
+    
+    
+    if (self.downloadTask){
+        [self.downloadTask suspend];
+        [self.downloadTask cancel];
+    }
+    
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:self.object.thumbnail completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+    self.downloadTask = [session downloadTaskWithURL:self.object.thumbnail completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
         
         NSData *dataURL = [NSData dataWithContentsOfURL:location];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (self.tag == (int)self.object.thumbnail) {
+            if ([thumbnailURL isEqual:self.object.thumbnail]) {
                 self.displayImage.image = [UIImage imageWithData:dataURL];
-//                NSLog(@"high res image : %@", self.object.highResThumbnail);
             }
             
         });
         
     }];
-    [downloadTask resume];
+    [self.downloadTask resume];
 }
 
 @end
